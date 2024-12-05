@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 100vh;
+    font-family: 'Righteous', sans-serif;
+    background-color: #faecf8;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0px 15px 0px;
+    color: #101c2c;
+}
+
+.corpo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameBoard {
+    max-width: 700px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.card {
+    width: 105px;
+    height: 105px;
+    position: relative;
+    cursor: pointer;
+
+    transform-style: preserve-3d;
+    transition: transform 0.4s;
+}
+
+.card_front,
+.card_back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    backface-visibility: hidden;
+}
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.card_front {
+    transform: rotateY(180deg);
+    background-color: #ffffff;
+}
+
+.card_back {
+    color: #101c2c;
+    background-color: #ffb3c8;
+    font-size: 2rem;
+}
+
+#gameOver {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 2rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    text-align: center;
+}
+
+#restart {
+    padding: 20px;
+    font-size: 1.2rem;
+    background-color: #aaaa02;
+    border: none;
+    border-radius: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.spaco {
+    margin-top: 1em;
+    background-color: green;
+}
+
+.styleDados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    font-size: 1.5em;
+    padding: 0.5em;
+}
+
+.styleDados span {
+    font-weight: bold;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 0.8em;
+}
+
+.rodapeMenu a {
+    text-decoration: none;
+}
+
+.rodapeMenu img {
+    border-radius: 10px;
+    margin: 0 1px 2px 1px;
+}
+
+@media screen and (max-width: 767px) {
+    #gameBoard {
+        gap: 6px;
+    }
+
+    .card {
+        width: 80px;
+        height: 80px;
+    }
+
+    .card_back {
+        font-size: 1.2rem;
+    }
+
+    .card_front,
+    .card_back {
+        border-radius: 10px;
+    }
+}

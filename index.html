@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/icons/logo.png" type="image/png">
+    <title>Memória Kids</title>
+</head>
+
+<body>
+
+    <h1 class="titulo">Memória Kids</h1>
+
+    <div class="corpo">
+
+        <div id="gameBoard"></div>
+
+        <div id="gameOver">
+            <div>
+                Parabéns!<br>Você completou o jogo!
+            </div>
+            <div>
+                <label>Nº Jogadas:</label>
+                <span id="NJogadasCop">0</span>
+            </div>
+            <div>
+                <label>Aproveitamento:</label>
+                <span id="AproveitamentoCop">0</span><span>%</span>
+            </div>
+            <button id="restart" onclick="restart()">Jogue novemente</button>
+        </div>
+    </div>
+
+    <div class="spaco"></div>
+
+    <!-- pontuacao -->
+    <div class="styleDados">
+        <label>Nº Jogadas:</label>
+        <span id="NJogadas">0</span>
+    </div>
+    <div class="styleDados">
+        <label>Aproveitamento:</label>
+        <span id="Aproveitamento">0</span><span>%</span>
+    </div>
+
+    <!-- rodape -->
+    <footer>
+        <div class="">Dev. Silas Gonçalves</div>
+        <div class="rodapeMenu">
+            <a class="" href="https://silasgoncalvesczs.github.io/codstec/" target="_blank">
+                <img class=""
+                    src="https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white"
+                    alt="Meu Portfolio">
+            </a>
+            <a class="" href="https://www.linkedin.com/in/silasgoncal/" target="_blank">
+                <img class=""
+                    src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"
+                    alt="linkedin">
+            </a>
+            <a class="" href="https://github.com/silasgoncalvesczs" target="_blank">
+                <img class=""
+                    src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"
+                    alt="Git Hub">
+            </a>
+        </div>
+    </footer>
+
+    <script src="./js/game.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
